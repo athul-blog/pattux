@@ -24,8 +24,18 @@
 
 ---
 
+
+
+
 ## 🌐 Live Demo
 
 🔗 [https://athul-blog.github.io/pattux](https://athul-blog.github.io/pattux)
 
 ---
+
+## 👨‍🎤 Creator
+
+**Athul vinod .M**  
+
+
+🔗 [GitHub](https://github.com/athulweb) • [Instagram](https://instagram.com/code_with_athul) • 
