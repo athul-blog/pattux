@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Premium | Pattux</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --secondary: #6366f1;
+      --bg: #f9fafb;
+      --text: #111827;
+      --accent: #e0e7ff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .hero {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #374151;
+    }
+
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 4rem 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 320px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .card ul li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .card .price {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+      color: var(--secondary);
+    }
+
+    .cta {
+      text-align: center;
+      margin: 2rem;
+    }
+
+    .cta button {
+      background: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta button:hover {
+      background: var(--secondary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .plans {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Pattu X<span style="color:#6366f1;">★</span></div>
+    <nav>
+      <!-- Add navigation if needed -->
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Upgrade to Premium</h1>
+    <p>Unlock all features, priority support, and ultimate performance by going Premium today.</p>
+  </section>
+
+  <section class="plans">
+    <!-- Free Plan -->
+    <div class="card">
+      <h2>Free Plan</h2>
+      <p class="price">$0</p>
+      <ul>
+        <li>✔ Listen best songs</li>
+        <li>✔ No login needed</li>
+        <li>✔ Medium style and standerd quality</li>
+        <li>✘ Songs are limited</li>
+        <li>✘ Cant download</li>
+          <li>✘ Cant Get offline app</li>
+      </ul>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="card">
+      <h2>Premium Plan</h2>
+      <p class="price">20/month</p>
+      <ul>
+        <li>✔ All Free Features</li>
+        <li>✔ Advanced quality</li>
+        <li>✔ Can specialy order songs </li>
+        <li>✔ dwnload any music </li>
+        <li>✔ Get full offline app</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <a href="http://wa.me/9539218900">
+    <button onclick="alert('Redirecting to payment...')">Get Premium Now</button>
+    </a>
+  </section>
+
+  <footer>
+    © 2025  Athul vinod .M . All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download | PATTU X</title>
+  <style>
+    :root {
+      --primary: #7c3aed;
+      --secondary: #e879f9;
+      --bg: #fdf4ff;
+      --card: #ffffff;
+      --text: #111827;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .brand span {
+      color: var(--secondary);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1.5rem 2rem;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .download-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 2rem 1.5rem;
+      width: 280px;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    .card img {
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: var(--primary);
+    }
+
+    .card button {
+      margin-top: auto;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .card button:hover {
+      background: var(--secondary);
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Pattu x<span>★</span></div>
+  </header>
+
+  <section class="hero">
+    <h1>Download Your App</h1>
+    <p>Choose your platform below and get started instantly. Smooth, fast, and always free to try.</p>
+  </section>
+
+  <section class="download-grid" id="downloadGrid">
+    <!-- Windows -->
+    <div class="card" data-platform="desktop">
+      <img src="https://img.icons8.com/color/96/000000/windows-10.png" alt="Windows">
+      <h3>Windows</h3>
+      <button onclick="window.open(secretkey)">Download</button>
+    </div>
+
+    <!-- Mac -->
+    <div class="card" data-platform="desktop">
+      <img src="https://img.icons8.com/ios-filled/100/000000/mac-os.png" alt="MacOS">
+      <h3>macOS</h3>
+      <button onclick="window.open(secretkey)">Download</button>
+    </div>
+
+    <!-- Linux -->
+    <div class="card" data-platform="desktop">
+      <img src="https://img.icons8.com/ios-filled/100/000000/linux.png" alt="Linux">
+      <h3>Linux</h3>
+      <button onclick="window.open(secretkey)">Download</button>
+    </div>
+
+    <!-- Android -->
+    <div class="card" data-platform="mobile">
+      <img src="https://img.icons8.com/color/96/000000/android-os.png" alt="Android">
+      <h3>Android</h3>
+      <button onclick="window.open(secretkey)">Download</button>
+    </div>
+
+    <!-- iOS -->
+    <div class="card" data-platform="mobile">
+      <img src="https://img.icons8.com/ios-filled/100/000000/ios-logo.png" alt="iOS">
+      <h3>iOS</h3>
+      <button onclick="window.open(secretkey)">Download</button>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Athul vinod .M . Download with confidence.
+  </footer>
+
+  <script>
+    const secretkey = "no-access.html"
+    // Detect if mobile, then show only Android/iOS cards
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const cards = document.querySelectorAll('.card');
+
+    if (isMobile) {
+      cards.forEach(card => {
+        if (card.dataset.platform !== 'mobile') {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>

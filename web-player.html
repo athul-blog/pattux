@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎵  PATTU X WEB Player</title>
+<link rel="stylesheet" href="style/play.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <h1>🎧 Pattux Music Player</h1>
+
+  <div class="player">
+    <!-- Hidden audio element -->
+    <audio id="audioPlayer" controls style="display:none;"></audio>
+
+    <!-- Controls -->
+    <div>
+      <button onclick="prevSong()">⏮ Prev</button>
+      <button onclick="togglePlayPause()">▶️ / ⏸</button>
+      <button onclick="nextSong()">⏭ Next</button>
+    </div>
+
+    <!-- Track Info -->
+    <div id="trackName">Track: --</div>
+
+    <!-- Search Bar -->
+    <input type="text" id="searchInput" placeholder="🔍 Search a song..." oninput="filterSongs()">
+
+    <!-- Filtered Song List -->
+    <ul id="songList" class="song-list"></ul>
+  </div>
+
+  <!-- Back Home -->
+  <a href="index.html">
+    <button class="back-home-button">Back to Home</button>
+  </a>
+
+  <script src="style/player.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(() => console.log('Service Worker Registered'))
+      .catch((err) => console.error('Service Worker registration failed:', err));
+  }
+</script>
+
+</body>
+</html>

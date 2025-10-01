@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="manifest" href="manifest.json">
+    <title> PATTU X</title>
+    <style>
+        
+body{
+    background-image: url(image/music.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+    </style>
+    <title>PAAATU X</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">HOME </a> 
+        <a href="web-player.html"> WEB PLAYER </a> 
+        <a href="about.html"> ABOUT </a> 
+        <a href="list.html"> FEATURES </a> 
+         <a href="pro.html"> GET PREMIUM </a> 
+         <a href="download.html"> DOWNLOAD </a> 
+          <a href="https://sites.google.com/view/pattu-x"> LOGIN </a> 
+    </div>
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+
+    <center>
+        <div class="main">
+            <header>
+                <h1> PATTU X</h1>
+            </header>
+
+<a href="web-player.html"> <button class="btn"> LIsten music for free</button> </a>
+
+<button class="btn" onclick="toggleSidebar()"> MORE OPTIONS </button> 
+
+        </div>
+    </center>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(() => console.log('Service Worker Registered'))
+      .catch((err) => console.error('Service Worker registration failed:', err));
+  }
+</script>
+
+<script>
+  const nav = document.querySelector('.nav');
+
+  function toggleSidebar() {
+    nav.classList.toggle('hidden');
+  }
+
+  // Auto-hide on load
+  window.addEventListener('load', () => {
+    if (window.innerWidth <= 768) {
+      nav.classList.add('hidden');
+    }
+  });
+
+  // Hide sidebar on link click (mobile only)
+  document.querySelectorAll('.nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        nav.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

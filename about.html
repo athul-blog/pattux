@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Pattu X</title>
+  <style>
+    :root {
+      --primary: #a855f7;
+      --secondary: #f472b6;
+      --bg: #1f1f2e;
+      --text: #fefefe;
+      --card: #2d2d44;
+      --highlight: #facc15;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 850px;
+      background: var(--card);
+      padding: 3rem 2rem;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      position: relative;
+    }
+
+.brand {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(45deg, var(--highlight), var(--secondary));
+  background-clip: text;          /* standard (mostly unsupported alone) */
+  -webkit-background-clip: text;  /* webkit prefix for Safari, Chrome */
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+
+
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--highlight);
+      margin-bottom: 2rem;
+      font-style: italic;
+     
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      color: var(--highlight);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: #e5e7eb;
+      line-height: 1.7;
+    }
+
+    .quotes {
+      font-size: 1.1rem;
+      margin-top: 2rem;
+      font-style: italic;
+      color: #c4b5fd;
+    }
+
+    .credit-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+      text-align: left;
+    }
+
+    .credit-list li {
+      padding: 0.5rem 0;
+      color: #d1d5db;
+    }
+
+    .floating {
+      position: absolute;
+      top: -30px;
+      right: -25px;
+      font-size: 3rem;
+      transform: rotate(-15deg);
+      color: var(--highlight);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-15deg); }
+      50% { transform: translateY(-10px) rotate(-15deg); }
+    }
+
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 2rem 1.5rem;
+      }
+
+      .brand {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="floating">🔥</div>
+    <div class="brand">Pattu X <span style="color:  black">★</span></div>
+    <div class="tagline"> Music is for a LIstener, so listning needs a skill</div>
+
+    <!-- About the Creator -->
+    <section>
+      <h2>👨‍💻 Who Built This?</h2>
+      <p>
+        Crafted with love and late-night caffeine by <a href="https://athulweb.github.io/athul"><strong>Athul vinod . M</strong> </a>— a dev who codes like a wizard and designs like a dreamer. Everything here is hand-coded. No templates, no shortcuts. Just vibes and vision.
+      </p>
+    </section>
+    <!-- Credits -->
+    <section>
+      <h2>💡 Credits & Tech</h2>
+      <p>
+        Respect to the tools & platforms that empower indie creators to do the impossible.
+      </p>
+      <ul class="credit-list">
+        <li>💻 Vanilla HTML + CSS + JS (no frameworks!)</li>
+        <li>🔥 Musics from youtube.com un officaly</li>
+        <li>💖 Crimson vault web developers team </li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    © 2025 Athul vinod .M . Designed to impress, built to perform.
+  </footer>
+
+</body>
+</html>
