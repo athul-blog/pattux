@@ -29,7 +29,3 @@
 🔗 [https://athul-blog.github.io/pattux](https://athul-blog.github.io/pattux)
 
 ---
-
-
-git clone https://github.com/YOUR_GITHUB_USERNAME/musicwave.git
-cd musicwave
