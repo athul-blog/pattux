@@ -1,0 +1,179 @@
+/* ------------------- */
+/* NAVIGATION (Desktop) */
+/* ------------------- */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 24px;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.nav a {
+    color: white;
+    margin: 25px 0;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hidden class for toggling menu */
+.hidden {
+    display: none;
+}
+
+/* ------------------- */
+/* HAMBURGER MENU */
+/* ------------------- */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+/* ------------------- */
+/* HEADER & MAIN AREA */
+/* ------------------- */
+header {
+    background: linear-gradient(93deg, yellow, yellowgreen);
+    width: 70%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-left: 200px; /* Push content away from sidebar */
+}
+
+.main {
+    margin-left: 200px; /* Same as sidebar width */
+    padding: 40px 20px;
+    height: calc(100vh - 170px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------- */
+/* BUTTON */
+/* ------------------- */
+.btn {
+    margin-top: 50px;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #00ffff, #0077ff);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3);
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.6);
+}
+
+/* ------------------- */
+/* ANIMATIONS */
+/* ------------------- */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* ---------------------------- */
+/* RESPONSIVE: Tablets & Phones */
+/* ---------------------------- */
+@media (max-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 200px;
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav a {
+        margin: 20px 0;
+        font-size: 18px;
+    }
+
+    .nav.hidden {
+        transform: translateX(-100%);
+    }
+
+    .nav:not(.hidden) {
+        transform: translateX(0);
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header {
+        margin-left: 0;
+        font-size: 2rem;
+        height: auto;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+        height: auto;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+        padding: 12px 30px;
+    }
+}
+
+/* Extra small devices (phones under 480px) */
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header {
+        font-size: 1.8rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+}

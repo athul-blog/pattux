@@ -1,0 +1,108 @@
+    body {
+      background: #111;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+
+    .player {
+      background: #1c1c1c;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ffcc55;
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    button {
+      background: #00ffcc;
+      border: none;
+      color: #111;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #00ddaa;
+    }
+
+    #trackName {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .back-home-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #00ffcc, #00ddaa);
+      color: #111;
+      padding: 20px 40px;
+      font-size: 24px;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(0, 255, 204, 0.3);
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .back-home-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 14px 35px rgba(0, 255, 204, 0.5);
+      background: linear-gradient(135deg, #00ddaa, #00ffcc);
+    }
+
+    .back-home-button:active {
+      transform: scale(0.97);
+      box-shadow: 0 6px 15px rgba(0, 255, 204, 0.2);
+    }
+
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      margin: 20px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    ul.song-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 10px;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    ul.song-list li {
+      padding: 8px;
+      cursor: pointer;
+      border-bottom: 1px solid #333;
+      color: #00ffcc;
+      transition: 0.2s;
+    }
+
+    ul.song-list li:hover {
+      background-color: #222;
+    }
