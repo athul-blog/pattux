@@ -1,6 +1,6 @@
 # 🎵 Pattu - X
 
-![Banner](https://athul-blog.github.io/images/pattu-x.jpg)
+![Banner](https://athul-blog.github.io/pattux/image/pattu-x.jpg)
 
 > **PATTU X** is a modern, lightweight, and responsive music streaming website built for creators, listeners, and indie artists. Stream high-quality audio directly in the browser — no backend or sign-up required.
 
